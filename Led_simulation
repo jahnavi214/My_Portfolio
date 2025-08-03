@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int button;
+    int led = 0;
+
+    printf("Push Button Controlled LED Simulation\n");
+    printf("Press 1 to turn LED ON, 0 to turn it OFF, -1 to exit\n");
+
+    while (1) {
+        printf("Enter button state (1/0): ");
+        scanf("%d", &button);
+
+        if (button == -1) {
+            printf("Exiting simulation...\n");
+            break;
+        }
+
+        if (button == 1) {
+            led = 1;
+            printf("LED is ON 🔆\n");
+        } else if (button == 0) {
+            led = 0;
+            printf("LED is OFF 💡\n");
+        } else {
+            printf("Invalid input! Use 1, 0, or -1.\n");
+        }
+    }
+
+    return 0;
+}
